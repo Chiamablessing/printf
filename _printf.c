@@ -13,9 +13,6 @@ int _printf(const char *format, ...)
 	va_list args;
 	int printed_values = 0;
 
-	if (format == NULL)
-		return (-1);
-
 	va_start(args, format);
 	while (*format)
 	{
@@ -24,6 +21,7 @@ int _printf(const char *format, ...)
 			format++;
 			if (_flags(*format, args, printed_values) == 1)
 				format++;
+				continue;
 		}
 		putchar(*format);
 		printed_values++;
