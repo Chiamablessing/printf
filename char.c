@@ -12,6 +12,6 @@ int _char(va_list args, int printed_values)
 	int value = va_arg(args, int);
 
 	putchar(value);
-	return (printed_values++);
-
+	printed_values++;
+	return (printed_values);
 }

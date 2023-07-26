@@ -22,8 +22,8 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			if (_flags(*format, args, printed_values) == 1)
-				format++;
+			printed_values = _flags(*format, args, printed_values);
+			format++;
 		}
 		if (*format == '\0')
 			return (printed_values);

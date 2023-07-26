@@ -11,7 +11,8 @@ int _decimal(va_list args, int printed_values)
 	int value = va_arg(args, int);
 
 	print_int(value);
-	return (printed_values++);
+	printed_values++;
+	return (printed_values);
 }
 /**
  * print_int - function that prints
