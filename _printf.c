@@ -25,10 +25,11 @@ int _printf(const char *format, ...)
 			if (_flags(*format, args, printed_values) == 1)
 				format++;
 		}
+		if (*format == '\0')
+			return (printed_values);
 		putchar(*format);
 		printed_values++;
 		format++;
-
 	}
 	va_end(args);
 

@@ -21,4 +21,5 @@ void _char(va_list args, int printed_values);
 void print_int(int n);
 void _decimal(va_list args, int printed_values);
 int _flags(char flag, va_list args, int printed_values);
+int get_precision(const char *format, int *i, va_list list);
 #endif
