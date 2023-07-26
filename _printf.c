@@ -29,11 +29,6 @@ int _printf(const char *format, ...)
 		printed_values++;
 		format++;
 
-		if (*format != '\0')
-		{
-			putchar(*format);
-		printed_values++;
-		}
 	}
 	va_end(args);
 
