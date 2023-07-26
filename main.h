@@ -19,7 +19,7 @@ typedef struct func_s
 int _printf(const char *format, ...);
 int _string(va_list args, int printed_values);
 int _char(va_list args, int printed_values);
-void print_int(int n);
+void print_int(int n, int *i);
 int _decimal(va_list args, int printed_values);
 int _flags(char flag, va_list args, int printed_values);
 int get_precision(const char *format, int *i, va_list list);
