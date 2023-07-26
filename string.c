@@ -16,10 +16,11 @@ void _string(va_list args, int printed_values)
 		str = "(null)";
 	}
 
-	while (str[str_len] != '0')
+	while (str[str_len] != '\0')
 	{
-		write(1, str, str_len);
-		printed_values += str_len;
+		write(1, &str[str_len], 1);
+		printed_values++;
 		str_len++;
 	}
+
 }
