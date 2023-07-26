@@ -10,18 +10,12 @@
 int _string(va_list args, int printed_values)
 {
 	char *str = va_arg(args, char *);
-	int str_len = 0;
 
-	if (str == NULL)
+	while (*str)
 	{
-		str = "(null)";
-	}
-
-	while (str[str_len] != '\0')
-	{
-		write(1, &str[str_len], 1);
+		putchar(*str);
 		printed_values++;
-		str_len++;
+		str++;
 	}
 	return (printed_values);
 }
