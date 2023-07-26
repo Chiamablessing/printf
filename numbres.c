@@ -22,6 +22,8 @@ int _decimal(va_list args, int printed_values)
  */
 void print_int(int n, int *i)
 {
+	int a;
+
 	if (n < 0)
 	{
 		putchar('-');
@@ -31,7 +33,7 @@ void print_int(int n, int *i)
 
 	if (n > 9)
 	{
-		int a = n / 10;
+		a = n / 10;
 		n -= 10 * a;
 		print_int(a, i);
 	}
