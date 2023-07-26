@@ -22,4 +22,4 @@ void _string(va_list args, int printed_values)
 		printed_values++;
 		str_len++;
 	}
-
+}
