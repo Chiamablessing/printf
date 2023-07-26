@@ -5,7 +5,7 @@
  * @flag: format specifier
  * @args: variadic argument
  * @printed_values: printed values
- * Return: return 1 if specifier is found and 0 otherwise
+ * Return: return number of values printed
  */
 
 int _flags(char flag, va_list args, int printed_values)
@@ -22,9 +22,8 @@ int _flags(char flag, va_list args, int printed_values)
 	{
 		if (flags[i].flag == flag)
 		{
-			flags[i].f(args, printed_values);
-			return (1);
+			return (flags[i].f(args, printed_values));
 		}
 	}
-	return (0);
+	return (printed_values);
 }

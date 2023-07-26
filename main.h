@@ -8,18 +8,19 @@
 *struct func_s - struture
 * @flag: The format
 * @f: The function associated.
-*/
+* Return: return number of values printed
+ */
 typedef struct func_s
 {
 	char flag;
-	void (*f)(va_list arg, int);
+	int (*f)(va_list arg, int);
 } func_t;
 
 int _printf(const char *format, ...);
-void _string(va_list args, int printed_values);
-void _char(va_list args, int printed_values);
+int _string(va_list args, int printed_values);
+int _char(va_list args, int printed_values);
 void print_int(int n);
-void _decimal(va_list args, int printed_values);
+int _decimal(va_list args, int printed_values);
 int _flags(char flag, va_list args, int printed_values);
 int get_precision(const char *format, int *i, va_list list);
 #endif

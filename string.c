@@ -5,8 +5,9 @@
  * out put to stdout
  * @args: variadic arguments
  * @printed_values: print values
+ * Return: return number of values printed
  */
-void _string(va_list args, int printed_values)
+int _string(va_list args, int printed_values)
 {
 	char *str = va_arg(args, char *);
 	int str_len = 0;
@@ -22,4 +23,5 @@ void _string(va_list args, int printed_values)
 		printed_values++;
 		str_len++;
 	}
+	return (printed_values);
 }

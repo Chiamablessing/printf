@@ -28,7 +28,8 @@ int get_precision(const char *format, int *i, va_list list)
 		 *	precision += format[index] - '0';
 		 *}
 		 *else
-		 */
+		 * Return: return number of values printed
+ */
 		if (format[index] == '*')
 		{
 			index++;

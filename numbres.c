@@ -4,13 +4,14 @@
  * out put to stdout
  * @args: variadic arguments
  * @printed_values: print values of argument
+ * Return: return number of values printed
  */
-void _decimal(va_list args, int printed_values)
+int _decimal(va_list args, int printed_values)
 {
 	int value = va_arg(args, int);
 
 	print_int(value);
-	printed_values++;
+	return (printed_values++);
 }
 /**
  * print_int - function that prints
