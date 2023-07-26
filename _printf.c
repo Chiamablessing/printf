@@ -26,7 +26,10 @@ int _printf(const char *format, ...)
 				format++;
 		}
 		if (*format == '\0')
+		{
+			printed_values++;
 			return (printed_values);
+		}
 		putchar(*format);
 		printed_values++;
 		format++;
